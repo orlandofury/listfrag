@@ -1,21 +1,19 @@
 package com.example.listasimple;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 
-public class DetailActivity extends Activity {
+public class DetailActivity extends FragmentActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_detail);
-		TextView textNombre= (TextView)findViewById(R.id.textNombre);
-		Intent intent = getIntent();
-		String nombre = intent.getStringExtra("nombre");
-		
-		textNombre.setText(nombre);
+		DetailFragment fragment = DetailFragment.newInstance(getIntent().getExtras());
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		//attach the fragment dynamically to the Activity
+		ft.add(android.R.id.content, fragment);
+		ft.commit();
 	}
 
 }
