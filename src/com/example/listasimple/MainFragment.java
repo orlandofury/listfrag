@@ -29,10 +29,21 @@ public class MainFragment extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int position,
 					long id) {
+				
+				// Si es tableta
+				//is_tablet es un item agregado en values/dimens y values-sw600dp/dimens
+				if(getResources().getBoolean(R.bool.is_tablet))
+				{
+					((MainListaActivity)getActivity()).updateDetail(nombres[position]);
+				}
+				else{
+					//Si no es tableta
 					Intent intent = new Intent(getActivity(),DetailActivity.class);
 					intent.putExtra("nombre",nombres[position]);
 					startActivity(intent);
 					//Toast.makeText(MainListaActivity.this, "Click Item", Toast.LENGTH_LONG).show();
+				}
+					
 				
 			}
 		});

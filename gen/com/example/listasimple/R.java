@@ -10,6 +10,14 @@ package com.example.listasimple;
 public final class R {
     public static final class attr {
     }
+    public static final class bool {
+        /** 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    
+         */
+        public static final int is_tablet=0x7f050000;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -24,10 +32,11 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080003;
-        public static final int fragment1=0x7f080002;
-        public static final int lstMain=0x7f080001;
-        public static final int textNombre=0x7f080000;
+        public static final int action_settings=0x7f090004;
+        public static final int fragment1=0x7f090002;
+        public static final int fragment2=0x7f090003;
+        public static final int lstMain=0x7f090001;
+        public static final int textNombre=0x7f090000;
     }
     public static final class layout {
         public static final int fragment_detail=0x7f030000;
@@ -35,14 +44,14 @@ public final class R {
         public static final int mainfragment=0x7f030002;
     }
     public static final class menu {
-        public static final int detail=0x7f070000;
-        public static final int main_lista=0x7f070001;
+        public static final int detail=0x7f080000;
+        public static final int main_lista=0x7f080001;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int title_activity_detail=0x7f050003;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060002;
+        public static final int title_activity_detail=0x7f060003;
     }
     public static final class style {
         /** 
@@ -66,10 +75,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

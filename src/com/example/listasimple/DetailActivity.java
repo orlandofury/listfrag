@@ -11,7 +11,7 @@ public class DetailActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		DetailFragment fragment = DetailFragment.newInstance(getIntent().getExtras());
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		//attach the fragment dynamically to the Activity
+		//attach the fragment dynamically to the content
 		ft.add(android.R.id.content, fragment);
 		ft.commit();
 	}
